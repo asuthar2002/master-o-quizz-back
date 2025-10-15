@@ -13,4 +13,3 @@ RUN npm config set registry https://registry.npmjs.org/
 RUN npm install --omit=dev
 EXPOSE 5000
 CMD ["node", "dist/app.js"]
- 
