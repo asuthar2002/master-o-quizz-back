@@ -12,7 +12,7 @@ const PORT = process.env.PORT;
 app.use(cookieParser());
 app.use(express.json());
 app.use(cors({
-    origin: ["http://localhost:5173", "https://master-o-quizz-front.vercel.app"],
+    origin: ["http://localhost:5173", "https://master-o-front.vercel.app"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
     allowedHeaders: ["Content-Type", "Authorization"]
@@ -43,7 +43,6 @@ app.use('/api', router)
 const start = async () => {
     await connectDB();
     await sequelize.sync({ alter: true });
-    console.log("ok1");
 };
 
 start();
