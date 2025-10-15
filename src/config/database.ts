@@ -11,6 +11,12 @@ export const sequelize = new Sequelize(
     dialect: "mysql",
     port: Number(process.env.DB_PORT) || 3306,
     logging: false,
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false, 
+      },
+    },
   }
 );
 
